@@ -15,9 +15,9 @@ public class miniCam : MonoBehaviour
     {
         Vector3 mouseMovement = Input.mousePosition;
         if (mouseMovement.x > 1664) {
-            transform.Rotate(0, 0, -0.1f);
+            transform.Rotate(0, 0.1f, -0.1f);
         } else if (mouseMovement.x < 896) {
-            transform.Rotate(0, 0, 0.1f);
+            transform.Rotate(0, -0.1f, 0.1f);
         }
     }
 }
