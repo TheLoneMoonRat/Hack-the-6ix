@@ -5,7 +5,7 @@ using UnityEngine;
 public class spawner : MonoBehaviour
 {
     public GameObject objectSpawn;
-    public GameObject objectSpawner;
+    public Transform objectSpawner;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +16,7 @@ public class spawner : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown("space")) {
-            Instantiate(objectSpawn, objectSpawner.transform);
+            Instantiate(objectSpawn, new Vector3((objectSpawner.position.x - 1), (objectSpawner.position.y - 7), objectSpawner.position.z), Quaternion.identity);
         }
     }
 }
