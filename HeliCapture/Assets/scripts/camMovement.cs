@@ -14,7 +14,7 @@ public class camMovement : MonoBehaviour
         Vector3 mouseMovement = Input.mousePosition;
         float sideMotion = Input.GetAxisRaw("Horizontal");
         float forwardMotion = Input.GetAxisRaw("Vertical");
-        transform.Translate(sideMotion/90, forwardMotion/90 + 0.02f, 0);
+        transform.Translate(sideMotion/90, forwardMotion/80 + 0.02f, 0);
         if (mouseMovement.x > 1664) {
             transform.Rotate(0, 0, -0.1f);
         } else if (mouseMovement.x < 896) {
